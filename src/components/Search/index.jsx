@@ -23,6 +23,8 @@ export const Search = () => {
     }
   }
 
+  console.log(profileData)
+
   return (
     <SearchContainer>
       <SearchBar user={user} setUser={setUser} handleClick={handleClick} />
@@ -36,7 +38,7 @@ export const Search = () => {
         />
       )}
 
-      {reposData && <Repositories repos={reposData} />}
+      {reposData && <Repositories repos={reposData} user={user} />}
     </SearchContainer>
   );
 };
